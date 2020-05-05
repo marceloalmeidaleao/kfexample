@@ -13,7 +13,7 @@ RUN sudo yum -y install unzip
 
 RUN unzip script.zip
 RUN chmod 775 /opt/menu.sh 
-RUN chmod 775 -R /opt/scripts_base/ 
+RUN chmod 775 -R /opt/scripts_base/
 
 #RUN add-apt-repository ppa:webupd8team/java
 #RUN apt-get install oracle-java8-installer
@@ -29,7 +29,7 @@ EXPOSE 2181/tcp
 EXPOSE 9999/tcp
 EXPOSE 8080/tcp
 
-
+RUN chmod 775 -R /kafka/
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 CMD ["/run.sh"]
