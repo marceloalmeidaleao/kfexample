@@ -29,7 +29,7 @@ EXPOSE 2181/tcp
 EXPOSE 9999/tcp
 EXPOSE 8080/tcp
 
-RUN chmod +x kafka/*.sh
+RUN chmod +x kafka/bin/*.sh
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
 CMD ["/run.sh"]
