@@ -18,7 +18,8 @@ RUN chmod 775 -R /opt/scripts_base/
 #RUN add-apt-repository ppa:webupd8team/java
 #RUN apt-get install oracle-java8-installer
 #RUN add-apt-repository ppa:webupd8team/java && sudo apt update
-RUN yum -y install java-1.8.0-openjdk
+#RUN yum -y install java-1.8.0-openjdk
+RUN yum install -y java-1.8.0-openjdk-devel git wget unzip which
 RUN yum -y install net-tools
 #RUN rm -rf /var/lib/apt/lists/* 
 #ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64 #This can vary
