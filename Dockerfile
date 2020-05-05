@@ -22,7 +22,7 @@ RUN yum -y install net-tools
 #RUN rm -rf /var/lib/apt/lists/* 
 #ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64 #This can vary
 ENV PATH $PATH:$JAVA_HOME/bin
-SHELL ["/bin/bash", "-c"]
+#SHELL ["/bin/bash", "-c"]
 EXPOSE 9092/tcp
 EXPOSE 2181/tcp
 EXPOSE 9999/tcp
