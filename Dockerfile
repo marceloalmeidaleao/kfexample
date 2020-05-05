@@ -30,5 +30,7 @@ EXPOSE 9999/tcp
 EXPOSE 8080/tcp
 
 
-SHELL ["/bin/bash", "-c"]
+ADD run.sh /run.sh
+RUN chmod +x /*.sh
+CMD ["/run.sh"]
 
