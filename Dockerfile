@@ -1,4 +1,5 @@
 FROM centos:7
+USER root
 
 COPY instalador/kafka/ /opt/kafka
 COPY instalador/script.zip /opt/
@@ -29,5 +30,5 @@ EXPOSE 9999/tcp
 EXPOSE 8080/tcp
 
 
-
+CMD [ "/bin/bash"]
 
