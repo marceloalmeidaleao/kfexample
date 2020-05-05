@@ -12,14 +12,14 @@ opcaodesejada=$1
                             echo -e "Parando Serviço Atual Kafka"
 
                             #sudo ./simulacomando.sh 1 ParadaKafka &
-                            sudo nohup ./kafka-server-stop.sh ../config/server.properties > nohupKafkaStop.out &
+                            ./kafka-server-stop.sh ../config/server.properties >/dev/null 2>&1 &
                             echo -e "Serviço Parado Kafka"
 
                             sleep 5
 
                             echo -e "Parando Serviço Atual Zookeeper"
                             #sudo ./simulacomando.sh 1 ParadaZookeeper &
-                            sudo nohup ./zookeeper-server-stop.sh ../config/zookeeper.properties > nohupStopZookeeper.out &
+                            ./zookeeper-server-stop.sh ../config/zookeeper.properties >/dev/null 2>&1 &
                             echo -e "Serviço Parado Zookeeper"
                             echo -e  ""
 
@@ -32,7 +32,7 @@ opcaodesejada=$1
 
                             echo -e  "Iniciando Serviço Atual Zookeeper"
                             #sudo ./simulacomando.sh 1 IniciandoZookeeper &
-                            sudo nohup ./zookeeper-server-start.sh ../config/zookeeper.properties > nohupStartZookeeper.out &
+                            ./zookeeper-server-start.sh ../config/zookeeper.properties >/dev/null 2>&1 &
 
                             echo -e  "Serviço Iniciado Zookeeper"
 
@@ -40,7 +40,7 @@ opcaodesejada=$1
 
                             echo -e  "Iniciando Serviço Atual Kafka"
                             #sudo ./simulacomando.sh 1 Iniciando &
-                            sudo nohup ./kafka-server-start.sh ../config/server.properties > nohupKafkaStop.out &
+                            ./kafka-server-start.sh ../config/server.properties >/dev/null 2>&1 &
 
                             echo -e "Serviço Iniciado Kafka"
 
@@ -58,14 +58,14 @@ opcaodesejada=$1
 
 
                             #sudo ./simulacomando.sh 1 ParadaKafka &
-                            sudo nohup ./kafka-server-stop.sh ../config/server.properties > nohupKafkaStop.out &
+                            ./kafka-server-stop.sh ../config/server.properties >/dev/null 2>&1 &
                             echo -e  "Serviço Parado Kafka"
 
                             sleep 5
 
                             echo -e  "Parando Serviço Atual Zookeeper"
                             #sudo ./simulacomando.sh 1 ParadaZookeeper &
-                            sudo nohup ./zookeeper-server-stop.sh ../config/zookeeper.properties > nohupStopZookeeper.out &
+                            ./zookeeper-server-stop.sh ../config/zookeeper.properties >/dev/null 2>&1 &
                             echo -e "Serviço Parado Zookeeper"
 
                             sleep 5
@@ -84,12 +84,12 @@ opcaodesejada=$1
                             sleep 5
                             echo -e  "Iniciando Serviço Zookeeper"
                             #sudo ./simulacomando.sh 1 IniciandoZookeeper &
-                            sudo nohup ./zookeeper-server-start.sh ../config/zookeeper.properties > nohupStartZookeeper.out &
+                            ./zookeeper-server-start.sh ../config/zookeeper.properties >/dev/null 2>&1 &
                             echo -e  "Serviço Iniciado Zookeeper"
                             sleep 5
                             echo -e  "Iniciando Serviço  Kafka"
                             #sudo ./simulacomando.sh 1 Iniciando &
-                            sudo nohup ./kafka-server-start.sh ../config/server.properties > nohupKafkaStop.out &
+                            ./kafka-server-start.sh ../config/server.properties >/dev/null 2>&1 &
                             sleep 5
                             echo -e "Serviço Iniciado Kafka"
                             echo -e  "Processo Finalizado com sucesso - Aperte Enter"
