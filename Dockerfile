@@ -7,7 +7,7 @@ WORKDIR /opt
 
 #Atualizacao
 
-RUN yum update -y
+#RUN yum update -y
 RUN yum -y install sudo
 RUN sudo yum -y install unzip
 
