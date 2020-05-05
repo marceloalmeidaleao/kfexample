@@ -30,5 +30,5 @@ EXPOSE 9999/tcp
 EXPOSE 8080/tcp
 
 
-CMD [ "/bin/bash"]
+SHELL ["/bin/bash", "-c"]
 
