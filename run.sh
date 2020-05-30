@@ -6,13 +6,13 @@ cd /kafka/
 chmod -R 775 *
 
 cd /kafka/bin
-nohup ./zookeeper-server-start.sh ../config/zookeeper.properties > nohupkafka.out &
+nohup ./zookeeper-server-start.sh ../config/zookeeper.properties &
 
 while :; do
 sleep 600
 done
 
-nohup ./kafka-server-start.sh ../config/server.properties > nothupzookeeper.out &
+./kafka-server-start.sh ../config/server.properties &
 echo -e "started"
 
 
